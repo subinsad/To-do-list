@@ -1,1 +1,75 @@
-/*# sourceMappingURL=main.css.map */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-image: linear-gradient(#ff949c, #ffc9bf);
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 990px;
+  padding: 24px 0;
+  background-color: #ffc9cc;
+}
+.wrap__header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 64px;
+  font-weight: 900;
+  color: #ff5360;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.2235294118);
+}
+.wrap__contents {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap__contents__input {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 80%;
+}
+.wrap__contents__input .inputField {
+  height: 75px;
+  width: 100%;
+  padding: 0 26px;
+  margin-bottom: 48px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2235294118);
+  font-size: 24px;
+}
+.wrap__contents__input .btn {
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  margin: auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.wrap__contents__input .btn .material-symbols-outlined {
+  font-size: 32px;
+  color: #3b3b3b;
+}
+.wrap__contents__to-dos {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  border-radius: 5px;
+  background-color: #fff1f1;
+}
+.wrap__contents__to-dos li {
+  list-style: none;
+  padding: 24px;
+  font-size: 20px;
+}/*# sourceMappingURL=main.css.map */

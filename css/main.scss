@@ -1,0 +1,103 @@
+@import './color.scss';
+
+$shadow: 0 4px 4px #00000039;
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    width: 100vw;
+
+    overflow-x: hidden;
+    background-image: linear-gradient($color-pink-002, $color-pink-003);
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 990px;
+
+    padding: 24px 0;
+
+    background-color: $color-pink-004;
+
+    &__header {
+        display: flex;
+        justify-content: center;
+
+        margin-bottom: 16px;
+
+        font-size: 64px;
+        font-weight: 900;
+        color: $color-pink-001;
+        text-shadow: $shadow;
+    }
+
+    &__contents {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        &__input {
+            display: flex;
+            justify-content: center;
+
+            position: relative;
+            width: 80%;
+
+            .inputField {
+                height: 75px;
+                width: 100%;
+
+                padding: 0 26px;
+                margin-bottom: 48px;
+
+                border: none;
+                border-radius: 5px;
+                box-shadow: $shadow;
+
+                font-size: 24px;
+            }
+
+            .btn {
+                position: absolute;
+                top: 22px;
+                right: 24px;
+                margin: auto;
+
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+
+                .material-symbols-outlined {
+                    font-size: 32px;
+                    color: $color-gray-001;
+                }
+            }
+        }
+
+        &__to-dos {
+            display: flex;
+            align-items: center;
+
+            height: 75px;
+            border-radius: 5px;
+
+            background-color: $color-white-001;
+
+            li {
+                list-style: none;
+
+                padding: 24px;
+
+                font-size: 20px;
+            }
+        }
+    }
+}

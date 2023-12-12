@@ -8,7 +8,8 @@
 ***
 
 ### 디자인
-![Desktop - 1](https://github.com/subinsad/ToDoList/assets/92204014/e6b5b171-02f6-4e23-a5fb-291ac9bbebd9)
+![Desktop - 1](https://github.com/subinsad/To-do-list/assets/92204014/292eec15-5584-4495-be2e-4bff2af62d62)
+
 - 글 작성
 - 타이머기능
 - 글삭제

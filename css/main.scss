@@ -18,12 +18,16 @@ body {
 .wrap {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 
     width: 990px;
+    height: 60%;
+    max-height: 800px;
 
     padding: 24px 0;
+    margin: 0 20px;
 
+    overflow-y: auto;
     background-color: $color-pink-004;
 
     &__header {
@@ -85,18 +89,47 @@ body {
         &__to-dos {
             display: flex;
             align-items: center;
+            flex-direction: column;
 
-            height: 75px;
-            border-radius: 5px;
+            width: 76%;
+            gap: 16px;
 
-            background-color: $color-white-001;
+            div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
 
-            li {
-                list-style: none;
-
+                width: 100%;
                 padding: 24px;
 
+                background-color: $color-white-001;
+                border-radius: 5px;
+                list-style: none;
                 font-size: 20px;
+
+                input[type='checkbox'] {
+                    width: 21px;
+                    height: 21px;
+                    border-radius: 50%;
+                    border: 3px solid $color-gray-001;
+                    appearance: none;
+                    cursor: pointer;
+                    transition: background 0.2s;
+                }
+
+                input[type='checkbox']:checked {
+                    background: $color-pink-001;
+                }
+
+                span {
+                    width: 85%;
+                }
+
+                button {
+                    border: none;
+                    background-color: $color-white-001;
+                    cursor: pointer;
+                }
             }
         }
     }

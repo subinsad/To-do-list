@@ -12,9 +12,13 @@ body {
 .wrap {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   width: 990px;
+  height: 60%;
+  max-height: 800px;
   padding: 24px 0;
+  margin: 0 20px;
+  overflow-y: auto;
   background-color: #ffc9cc;
 }
 .wrap__header {
@@ -64,12 +68,40 @@ body {
 .wrap__contents__to-dos {
   display: flex;
   align-items: center;
-  height: 75px;
-  border-radius: 5px;
-  background-color: #fff1f1;
+  flex-direction: column;
+  width: 76%;
+  gap: 16px;
 }
-.wrap__contents__to-dos li {
-  list-style: none;
+.wrap__contents__to-dos div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   padding: 24px;
+  background-color: #fff1f1;
+  border-radius: 5px;
+  list-style: none;
   font-size: 20px;
+}
+.wrap__contents__to-dos div input[type=checkbox] {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  border: 3px solid #3b3b3b;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.wrap__contents__to-dos div input[type=checkbox]:checked {
+  background: #ff5360;
+}
+.wrap__contents__to-dos div span {
+  width: 85%;
+}
+.wrap__contents__to-dos div button {
+  border: none;
+  background-color: #fff1f1;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

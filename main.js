@@ -1,13 +1,36 @@
-let inputBox = document.getElementById('inputField');
-let addToDo = document.getElementById('addToDo');
-let toDoList = document.getElementById('toDoList');
+document.addEventListener('DOMContentLoaded', () => {
+    const toDo = document.querySelector('#toDo');
+    const addButton = document.querySelector('#addButton');
+    const toDoList = document.querySelector('#toDoList');
 
-addToDo.addEventListener('click', () => {
-    var list = document.createElement('li');
-    if (!inputBox.value) alert('내용을입력');
-    else {
-        list.innerText = inputBox.value;
-        toDoList.appendChild(list);
-        inputBox.value = '';
-    }
+    addButton.addEventListener('click', (event) => {
+        const item = document.createElement('div'); //div
+
+        const checkBox = document.createElement('input');
+        checkBox.setAttribute('type', 'checkBox');
+
+        const text = document.createElement('span'); //내용
+        text.textContent = toDo.value;
+
+        const removeButton = document.createElement('button'); // 삭제
+        removeButton.innerHTML =
+            '<span class="material-symbols-outlined"> delete </span>';
+
+        removeButton.addEventListener('click', (event) => {
+            event.currentTarget.parentNode.parentNode.removeChild(
+                event.currentTarget.parentNode
+            );
+        });
+        item.appendChild(checkBox);
+        item.appendChild(text);
+        item.appendChild(removeButton);
+
+        toDoList.appendChild(item);
+        toDo.value = '';
+
+        const FullListContainer = styled.div`
+            height: 520px;
+            overflow-y: auto;
+        `;
+    });
 });

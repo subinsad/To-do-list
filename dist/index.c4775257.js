@@ -18,10 +18,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
         item.appendChild(removeButton);
         toDoList.appendChild(item);
         toDo.value = "";
-        const FullListContainer = styled.div`
-            height: 520px;
-            overflow-y: auto;
-        `;
     });
 });
 
